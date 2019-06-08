@@ -1,3 +1,7 @@
+// let: keyword to create  mutable variable
+// const: keyword to create immutable variable
+
+
 // variable name:  num
 // variable value: 10
 // variable data type: number
