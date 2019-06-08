@@ -1,0 +1,49 @@
+* assumption
+- HTML5
+- JS
+- CSS3
+- Bootstrap 3.3.7
+
+* basics
+- url
+- browser
+- request
+- response
+
+* JS
+- basics
+- advanced (ES6/7/8)
+
+* Node
+- server application development in JS
+
+* Express
+- web server
+
+* Mongo
+- No SQL DB
+
+* MySQL
+- RDBMS
+
+* Angular
+- Single Page Application
+
+* Testing
+- Jasmine
+
+* DevOps
+- Docker
+- Jenkins
+
+* Deployment
+- Apache/Ngnix
+- cloud (AWS)
+
+
+
+
+
+
+
+

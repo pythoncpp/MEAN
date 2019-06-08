@@ -1,0 +1,151 @@
+* Server
+- application/program/process
+- which serves requests
+- types
+  - web server
+  - file server
+  - application server
+  - database server
+
+* Web Server
+- server that serves web requests
+- the requests coming on port 80/443
+- follows the protocols: http/https
+- e.g.
+  - Apache2
+  - GlassFish
+  - Express
+  - IIS (Internet Information Server)
+
+* Database Server
+- used for data persistence
+- types
+  - RDBMS
+    - MySQL
+    - Oracle
+    - MS SQL Server
+    - PosGre
+    - IBM DB2
+  - NoSQL
+    - MongoDB
+    - Cassandra
+    - Hive
+    - HBase
+    - CouchDB
+    - CouchBase
+    - Firebase
+    - Redis
+
+
+* URL
+- Uniform resource locator
+- resource: any file which is hosted/copied on the server
+- e.g.
+
+  https://google.com
+  https://172.217.166.78
+  https://localhost:8080
+  https://localhost:8080/page1.html
+  https://localhost:8080/page1.php?name=test
+  https://localhost:8080/page1.html#top
+
+- components
+  - scheme
+    - protocol that needs to be used while communicating with server
+    - is not used then by default browser uses http protocol
+    - e.g. http/https/ftp/ftps/sftp
+  - domain name or IP address (*)
+  - port no of the server Web server process 
+    - if not used then the default port will be used
+    - e.g. http (80), https (443), ftp(21)
+  - file name or path
+    - if not used then the server sends startup page
+  - query string
+    - used to send input parameters (arguments) to the page
+    - always present in key=value format
+    - collection of key-value pairs separated by &
+  - hash component (proxy) component
+    - used to link a section within a page 
+
+- status code
+  - 1xx: informational/debugging messages
+  - 2xx: success (200/201)
+  - 3xx: migration (300/301)
+  - 4xx: client error (400/401/404)
+  - 5xx: server error (500)
+
+
+
+* Browser
+- interpreter for html/css and JS
+- browser can execute only JS
+- components
+  - network component: deals with networking
+  - layout/rendering engine: converts html/css to JS
+  - JavaScript Engine: executes the JS code
+  - user interface component: displays the output
+  - data persistence: deals with data persistence
+- browsers
+  - google chrome
+    - layout/rendering engine: blink
+    - JavaScript Engine: V8
+  - apple safari
+    - layout/rendering engine: WebKit
+    - JavaScript Engine: NitroJS
+  - mozilla firefox
+    - layout/rendering engine: Gecko
+    - JavaScript Engine: SpiderMonkey
+  - opera opera
+    - layout/rendering engine: blink
+    - JavaScript Engine: -
+  - MS Edge
+    - layout/rendering engine: EdgeHTML
+    - JavaScript Engine: Chakra
+
+
+* software stack
+- collection of software
+- for web development
+  - web server
+  - db server
+  - platform
+  - language to create client UI
+- eg.
+  - AMP
+    - Apache + MySQL + PHP/Perl/Python
+    - LAMP = Linux + AMP
+    - WAMP = Windows + AMP
+    - MAMP = macOS + AMP
+  - WISA
+    - Windows + IIS + SQL Server + Aspx
+  - MEAN
+    - Mongodb + Express + Angular + Node
+  - MERN
+    - Mongodb + Express + React + Node
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
