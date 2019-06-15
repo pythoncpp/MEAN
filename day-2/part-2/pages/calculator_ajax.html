@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator (ajax)</h1>
+        <div class="form">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Value1</label>
+                        <input id="value1" type="number" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Value2</label>
+                        <input id="value2" type="number" class="form-control">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Operation</label>
+                        <select id="operation" class="form-control">
+                            <option value="a">Addition</option>
+                            <option value="s">Sutraction</option>
+                            <option value="d">Division</option>
+                            <option value="m">Multiplication</option>
+                        </select>
+                    </div> 
+                </div>
+                <div class="col-md-6">
+                    <label for="" id="result"></label>
+                    <br/>
+                    <button onclick="calculate()" class="btn btn-success">Calculate</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        function calculate() {
+            const value1 = $('#value1').val();
+            const value2 = $('#value2').val();
+            const operation = $('#operation').val();
+
+            console.log(value1, value2, operation);
+            const url = `/operation?value1=${value1}&value2=${value2}&operation=${operation}`;
+
+            $.ajax({
+                url: url,
+                method: 'GET',
+                success: function(response) {
+                    console.log(response);
+                    $('#result').text('result: ' + response);
+                },
+                error: function(error) {
+                    console.log(`error: ${error}`);
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
