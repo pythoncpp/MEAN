@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page1</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <button onclick="showHello()">hello</button>
+
+    
+    <script>
+
+        console.log(this);
+
+        function showHello() {
+            window.alert('hello');
+        }
+
+        const person = { name: "person", address: "Pune", age: 45 };
+        console.log(person);
+
+        const person1 = new Object();
+        person1.name = 'person1';
+        person1.address = 'Pune';
+        person1.age = 40;
+
+        console.log(person1);
+
+        
+        function Person(name, address, age) {
+            this.name = name;
+            this.address = address;
+            this.age = age;
+        }
+
+        Person.prototype.canVote = function () {
+            if (this.age >= 18) {
+                console.log('yes..');
+            } else {
+                console.log('no..');
+            }
+        };
+    
+        // overriding toString at prototype level
+        Person.prototype.toString = function() {
+            return `Person [name: ${this.name}, address: ${this.address}, age: ${this.age}]`;
+        }; 
+
+        const p1 = new Person('person1', 'Pune', 40);
+        p1.canVote = function () {
+            if (this.age >= 18) {
+                console.log('p1 -> yes..');
+            } else {
+                console.log('p1 -> no..');
+            }
+        };
+        console.log(p1);
+        p1.canVote();
+        console.log(p1.toString());
+
+
+        const p2 = new Person('person2', 'Pune', 10);
+        console.log(p2);
+        p2.canVote();
+
+        // overriding toString at object level
+        // p2.toString = function() {
+        //     return `Person[name: ${this.name}, address: ${this.address}, age: ${this.age}]`;
+        // };
+        console.log(p2.toString());
+
+    </script>
+</body>
+</html>
