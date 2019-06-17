@@ -1,0 +1,19 @@
+- write a program to perform mathematical operations using function alias
+  - share these functions  with other modules
+- write a program to display the computer configuration using OS module
+  - hostname
+  - operating system
+  - free and total memory
+  - cpu configuration
+  - home directory
+- write a program to read file using file name synchronously and asynchronously
+- write a program to copy a file from one location to another location to another location [use hardcoded locations]
+- write a program to delete a file by using the path
+- write http server to detect a request method and request url [use postman to test the apis with different methods and urls]
+- write a http server which can
+  - return the contents of home.html when user hits /home
+    - home.html will be a simple web page
+  - return the contents of contact-us.html when user hits  /contact-us
+    - create the contact-us.html with a form to get input from user 
+    - let the user submit the form to /contact-details api
+    - read the values from request and display them on console
