@@ -1,0 +1,81 @@
+* request
+- url: file or path
+- method: http method
+- query: query string
+- body: request body
+- params: request parameters (dynamic values)
+
+
+* npm
+- node package manager
+- manage the packages
+- install npm
+
+  > sudo apt-get install npm
+  > sudo yum install npm
+
+* express
+- install
+
+  > npm install express mysql
+
+* mysql
+- install
+  > sudo apt-get install mysqlserver
+  > sudo apt-get install mysqlclient
+- connect to the mysql
+
+  > mysql -h localhost -u root -p
+
+
+* url
+- GET 		localhost:5000/product
+- POST		localhost:5000/product?id=6&title=product 6&price=600&description=product 6
+- PUT		localhost:5000/product?id=6&title=product 1- updated&price=150&description=product 1-updaetd
+- DELETE	localhost:5000/product?id=4
+
+
+* testing:
+
+{
+	"id": 1,
+	"title": "product 1",
+	"description": "description 1description 1description 1description 1description 1description 1description 1description 1description 1description 1description 1description 1description 1description 1description 1description 1",
+	"price": 1000
+}
+
+
+* database
+
+> show databases;
+> create database mean_db;
+> use mean_db;
+> show tables;
+> create table Product (id integer primary key auto_increment, title varchar(200), description varchar(5000), price float);
+> desc Product;
+> select id, title, description, price from Product;
+> insert into Product (title, description, price)  values ('product  1', 'product 1 description', 100);
+> update Product set title = 'product 1 updated', description = 'product 1 description updated', price = 150 where  id = 1;
+> delete from Product where id = 1;
+
+
+
+
+{
+	"status": "success/error",
+	"data": <data>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
