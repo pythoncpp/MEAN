@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded());
 
 // all the files in the  public folder will not require any 
 // specific route -> use /<file name> on browser
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'))
 
 // add all the routes
 app.use('/product', productRouter)
