@@ -1,12 +1,12 @@
 * blog
 
 User Apis:
-- POST   : /user/singup
-- POST   : /user/signin
-- GET    : /user/profile
-- PUT    : /user/profile
-- DELETE : /user/profile
-- POST   : /user/profile/image
+- POST   : /user/singup		[done]
+- POST   : /user/signin		[done]
+- GET    : /user/profile	[done]
+- PUT    : /user/profile	[done]
+- DELETE : /user/profile	
+- POST   : /user/profile/image	[done]
 
 Blog apis:
 - GET    : blog
@@ -32,9 +32,9 @@ Blog apis:
 
 * queries
 
-create table user (id integer primary  key auto_increment, firstname varchar(100), lastname varchar(100), address varchar(500), email varchar(100), password varchar(150), phone varchar(20), profileImage varchar(100), timestamp timestamp default CURRENT_TIMESTAMP);
+create table user (id integer primary  key auto_increment, firstname varchar(100), lastname varchar(100), address varchar(500), email varchar(100), password varchar(150), phone varchar(20), profileImage varchar(100), timestamp timestamp default CURRENT_TIMESTAMP, deleted integer(1));
 
-create table blog (id integer primary key auto_increment, title varchar(200), contents varchar(5000), image varchar(100), userId integer, timestamp timestamp default CURRENT_TIMESTAMP);
+create table blog (id integer primary key auto_increment, title varchar(200), contents varchar(5000), image varchar(100), userId integer, timestamp timestamp default CURRENT_TIMESTAMP, deleted integer(1));
 
 create table comment (id integer primary key auto_increment, userId integer, blogId integer, comment varchar(5000), timestamp timestamp default CURRENT_TIMESTAMP);
 
@@ -59,6 +59,12 @@ create table rating (id integer primary key auto_increment, userId integer, blog
     abcd -> abcdtest1235wsdf -> basdfadsf
 
 
+
+* packages
+- express: to create a http server
+- mysql: to connect to the database
+- muller: to upload the file(s) to the server
+- morgan: to enable logging
 
 
 
