@@ -5,7 +5,7 @@ User Apis:
 - POST   : /user/signin		[done]
 - GET    : /user/profile	[done]
 - PUT    : /user/profile	[done]
-- DELETE : /user/profile	
+- DELETE : /user/profile	[done]
 - POST   : /user/profile/image	[done]
 
 Blog apis:
@@ -65,6 +65,11 @@ create table rating (id integer primary key auto_increment, userId integer, blog
 - mysql: to connect to the database
 - muller: to upload the file(s) to the server
 - morgan: to enable logging
+- swagger: to create ui for testing the apis
+
+
+* swagger
+> npm install swagger-express swagger-ui-express swagger-jsdoc swagger-express-jsdoc
 
 
 

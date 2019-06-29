@@ -11,11 +11,46 @@ const upload = multer({ dest: 'images'})
 
 const router = express.Router()
 
-router.get('/', (request, response) => {
-    response.send('GET users')
-})
-
-// signup 
+/**
+ * @swagger
+ *
+ * /user/signup:
+ *   post:
+ *     description: register a new user account
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: email
+ *         description: Email to use for login
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: password
+ *         description: User's password.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: firstname
+ *         description: User's first name.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: last name
+ *         description: User's last name.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: phone
+ *         description: User's phone number.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: login
+ *       401:
+ *         description: user does not exist
+ */
 router.post('/signup', (request, response) => {
     const { firstname, lastname, email, address, phone, password } = request.body
 
@@ -33,7 +68,32 @@ router.post('/signup', (request, response) => {
     })
 })
 
-// signin
+
+/**
+ * @swagger
+ *
+ * /user/signin:
+ *   post:
+ *     description: Login to the application
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: email
+ *         description: Email to use for login
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: password
+ *         description: User's password.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: login
+ *       401:
+ *         description: user does not exist
+ */
 router.post('/signin', (request, response) => {
     const { email, password } = request.body
 
@@ -63,7 +123,22 @@ router.post('/signin', (request, response) => {
     })
 })
 
-// profile
+
+/**
+ * @swagger
+ *
+ * /user/profile:
+ *   get:
+ *     description: Login to the application
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *     responses:
+ *       200:
+ *         description: login
+ *       401:
+ *         description: user does not exist
+ */
 router.get('/profile/:id', (request, response) => {
     const id = request.params.id
 
