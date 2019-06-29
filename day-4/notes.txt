@@ -1,12 +1,12 @@
 * blog
 
 User Apis:
-- POST   : singup
-- POST   : signin
-- GET    : profile
-- PUT    : profile
-- DELETE : profile
-- POST   : profile/image
+- POST   : /user/singup
+- POST   : /user/signin
+- GET    : /user/profile
+- PUT    : /user/profile
+- DELETE : /user/profile
+- POST   : /user/profile/image
 
 Blog apis:
 - GET    : blog
@@ -32,14 +32,13 @@ Blog apis:
 
 * queries
 
-create table user (id integer primary  key auto_increment, firstname varchar(100), lastname varchar(100), address varchar(500), email varchar(100), password varchar(150), phone varchar(20), profileImage varchar(100));
+create table user (id integer primary  key auto_increment, firstname varchar(100), lastname varchar(100), address varchar(500), email varchar(100), password varchar(150), phone varchar(20), profileImage varchar(100), timestamp timestamp default CURRENT_TIMESTAMP);
 
+create table blog (id integer primary key auto_increment, title varchar(200), contents varchar(5000), image varchar(100), userId integer, timestamp timestamp default CURRENT_TIMESTAMP);
 
-create table blog (id integer primary key auto_increment, title varchar(200), contents varchar(5000), image varchar(100), userId integer);
+create table comment (id integer primary key auto_increment, userId integer, blogId integer, comment varchar(5000), timestamp timestamp default CURRENT_TIMESTAMP);
 
-create table comment (id integer primary key auto_increment, userId integer, blogId integer, comment varchar(5000));
-
-create table rating (id integer primary key auto_increment, userId integer, blogId integer, rating float);
+create table rating (id integer primary key auto_increment, userId integer, blogId integer, rating float, timestamp timestamp default CURRENT_TIMESTAMP);
 
 
 
