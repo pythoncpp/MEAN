@@ -9,17 +9,18 @@ User Apis:
 - POST   : /user/profile/image	[done]
 
 Blog apis:
-- GET    : blog
+- GET    : blog							[done]
 - GET    : blog/{bid}/rating
-- GET    : blog/{bid}/comment
-- POST	 : {userid}/blog
-- PUT    : {userid}/blog/{bid}
-- DELETE : {userid}/blog/{bid}
-- POST	 : {userid}/blog/{bid}/rating
-- DELETE : {userid}/blog/{bid}/rating
-- POST	 : {userid}/blog/{bid}/comment
-- DELETE : {userid}/blog/{bid}/comment
-- POST	 : {userid}/blog/{bid}/comment/{commented}/reply
+- GET    : blog/{bid}/comment					[done]
+
+- POST	 : /blog/{userid}					[done]
+- PUT    : /blog/{userid}/{bid}
+- DELETE : /blog/{userid}/{bid}					[done]
+- POST	 : /blog/{userid}/{bid}/rating
+- DELETE : /blog/{userid}/{bid}/rating
+- POST	 : /blog/{userid}/{bid}/comment				[done]
+- DELETE : /blog/{userid}/{bid}/comment				[done]
+- POST	 : /blog/{userid}/{bid}/comment/{commented}/reply       [pending]
 
 
 * tables
@@ -65,7 +66,10 @@ create table rating (id integer primary key auto_increment, userId integer, blog
 - mysql: to connect to the database
 - muller: to upload the file(s) to the server
 - morgan: to enable logging
+- crypto-js: to encrypt the data
 - swagger: to create ui for testing the apis
+- jwt: to authorise the API
+- passport: to authenticate user
 
 
 * swagger
