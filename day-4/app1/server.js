@@ -1,10 +1,15 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 // adding the routes
 const routerUser = require('./routes/user')
 const routerBlog = require('./routes/blog')
 
 const app = express()
+
+// for getting input from the request
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 // adding the routes
 app.use('/user', routerUser)

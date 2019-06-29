@@ -42,6 +42,21 @@ create table rating (id integer primary key auto_increment, userId integer, blog
 
 
 
+* encryption
+- reversible
+  - data -> encrypted 
+  - encryptedData -> data
+  - e.g.
+
+    abcd -> bcde
+    bcde -> abcd
+
+
+- irreversible 
+  - once encrypted the data can NOT be decrypted back
+  - e.g.
+
+    abcd -> abcdtest1235wsdf -> basdfadsf
 
 
 
