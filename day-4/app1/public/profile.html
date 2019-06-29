@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script src="jquery.js"></script>
+    <script>
+        
+        $.ajax({
+            url: 'http://localhost:7000/user/profile/1',
+            success: function(response) {
+                if (response['status'] == 'success')  {
+                    const user = response['data'][0]
+
+                    const result =  `
+                        <img src="http://localhost:7000/${user.profileImage}" alt="">
+                        <div id="name">${user.firstname} ${user.lastname}</div>
+                        <div id="address">${user.address}</div>
+                        <div id="email">${user.email}</div>
+                        <div id="phone">${user.phone}</div>
+                    `;
+                    $('#result').html(result)
+                }
+                
+            },
+            error:  function(error) {
+                console.error(error)
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -11,6 +11,10 @@ const app = express()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// static routes
+app.use(express.static('public'))
+app.use(express.static('images'))
+
 // adding the routes
 app.use('/user', routerUser)
 app.use('/blog', routerBlog)
