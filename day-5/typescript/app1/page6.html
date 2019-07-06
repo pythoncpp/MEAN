@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .mydiv {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="personName"></div>
+    <div id="personAddress"></div>
+
+    <div id="products"></div>
+
+    <button onclick="showAlert()">Show Alert</button>
+
+    <div id="mydiv" class="mydiv"></div>
+    <button onclick="changeColor()">test button</button>
+
+    <script>
+        function changeColor() {
+            const div = document.getElementById('mydiv')
+            div.style.backgroundColor = 'green';
+        }
+
+        function showAlert() {
+            alert('hello user!!!')
+        }
+
+
+        const personName = "steve jobs"
+        const personAddress = "USA"
+
+        const divName = document.getElementById('personName')
+        divName.innerText = personName
+
+        const divAddress = document.getElementById('personAddress')
+        divAddress.innerText = personAddress
+
+        const products = [{
+            id: 1,
+            title: 'product 1',
+            price: 100,
+            description: 'description for product 1'
+        }, {
+            id: 2,
+            title: 'product 2',
+            price: 200,
+            description: 'description for product 2'
+        }, {
+            id: 3,
+            title: 'product 3',
+            price: 300,
+            description: 'description for product 3'
+        }, {
+            id: 4,
+            title: 'product 4',
+            price: 400,
+            description: 'description for product 4'
+        }]
+
+        let table = `
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+        for (let index = 0; index < products.length; index++) {
+            const product = products[index];
+            table += `
+                <tr>
+                    <td>${product.id}</td>
+                    <td>${product.title}</td>
+                    <td>${product.price}</td>
+                    <td>${product.description}</td>
+                </tr>
+            `
+        }
+        table += `
+                </tbody>
+            </table>
+        `
+
+        const divProducts = document.getElementById('products')
+        divProducts.innerHTML = table
+    </script>
+</body>
+
+</html>

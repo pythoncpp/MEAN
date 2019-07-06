@@ -1,0 +1,15 @@
+<h1>Fifth Component</h1>
+
+<div><strong>Color: </strong>{{mycolor}}</div>
+<div [style.color]="mycolor"><strong>Color: </strong>{{mycolor}}</div>
+
+<div>
+    <button (click)="changeColor('red')">Red</button>
+    <button (click)="changeColor('green')">Green</button>
+    <button (click)="changeColor('blue')">Blue</button>
+    <button (click)="changeColor('brown')">Brown</button>
+    <button (click)="changeColor('black')">Black</button>
+    <button (click)="changeColor('yellow')">Yellow</button>
+</div>
+
+<div [style.background-color]="mycolor" class="box"></div>

@@ -1,0 +1,41 @@
+<h1>Fourth Component</h1>
+
+<div><strong>Person Name:</strong> {{personName}}</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!-- Event binding -->
+<button (click)="showAlert()">Show Alert 1</button>
+<button (click)="showAlert()">Show Alert 2</button>
+<button (click)="showAlert()">Show Alert 3</button>
+
+<button (click)="changeName()">Change to Steve Jobs</button>
+
+<br/>
+
+<!-- in build object: $event: event information -->
+<input (keyup)="onKeyup($event)" type="text" placeholder="name">
+
+<br/>
+
+<div><strong>{{currentNumber}}</strong></div>
+
+<div>
+    <button class="calc-button" (click)="onButtonClick('1')">1</button>
+    <button class="calc-button" (click)="onButtonClick('2')">2</button>
+    <button class="calc-button" (click)="onButtonClick('3')">3</button>
+</div>
+
+<div>
+    <button class="calc-button" (click)="onButtonClick('4')">4</button>
+    <button class="calc-button" (click)="onButtonClick('5')">5</button>
+    <button class="calc-button" (click)="onButtonClick('6')">6</button>
+</div>
+
+<div>
+    <button class="calc-button" (click)="onButtonClick('7')">7</button>
+    <button class="calc-button" (click)="onButtonClick('8')">8</button>
+    <button class="calc-button" (click)="onButtonClick('9')">9</button>
+</div>

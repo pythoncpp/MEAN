@@ -1,0 +1,56 @@
+* Single Page Application (SPA)
+- which contains only one Page (head + body)
+- frameworks
+  - Google Angular: SPA
+  - React: MPA + SPA
+  - Vue: SPA + MPA
+- it gets downloaded only once [first time]
+- the first time loading is more than MPA
+
+* Angular
+- given by Google
+- version
+  - AngularJs 1.x: [PHP + angular tag]
+  - Angular 2
+    - rewritten in TypeScript
+    - component oriented architecture
+    - version
+      - version 3
+      - version 4
+      - version 5
+      - version 6
+      - version 7
+      - version 8 *
+
+- to update the node on linux
+  > extract the node 10 into home/node10
+  > vim ~/.bashrc
+  > escape i
+  > export PATH=~/node10/bin:$PATH
+  > escape :wq
+
+  > restart the terminal 
+
+- angular cli [ng]
+  - tool to manage the angular project
+  - command
+    - to create a new application
+
+      > ng new app1
+
+    - to run the application
+
+      > ng serve
+
+
+
+
+
+
+
+
+
+
+
+
+
