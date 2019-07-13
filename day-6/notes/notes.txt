@@ -1,0 +1,5 @@
+> create table User (id integer primary key auto_increment, firstName varchar(100), lastName varchar(100), email varchar(100), phone varchar(15), address varchar(1000));
+Query OK, 0 rows affected (0.03 sec)
+
+> insert into User (firstName, lastName, email, phone, address) values ('steve', 'jobs', 'steve@apple.com', '+123424', 'USA');
+> insert into User (firstName, lastName, email, phone, address) values ('bill', 'gate', 'bill@ms.com', '+1234244567', 'USA');

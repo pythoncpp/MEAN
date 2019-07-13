@@ -1,0 +1,6 @@
+<i
+  (click)="onClick(star)"
+  [class.on]="star <= rating"
+  [class.off]="star > rating"
+  *ngFor="let star of maxStars"
+  class="glyphicon glyphicon-star"></i>

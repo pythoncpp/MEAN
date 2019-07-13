@@ -1,0 +1,40 @@
+<h1>List Products</h1>
+
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-success pull-right" (click)="onAdd()">Add</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i = index">
+          <td>{{i + 1}}</td>
+          <td>{{product.title}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.price}}</td>
+          <td>
+            <button (click)="onDelete(product)" class="btn btn-danger" style="margin-right: 10px">
+                <i class="glyphicon glyphicon-trash"></i>
+            </button>
+
+            <button (click)="onEdit(product)" class="btn btn-warning">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
