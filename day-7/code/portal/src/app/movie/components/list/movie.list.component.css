@@ -1,0 +1,25 @@
+.movie-container {
+  padding: 10px;
+}
+
+.movie-item {
+  padding: 15px;
+  height: 500px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.movie-item img {
+  width: 100%;
+}
+
+.heading {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.value {
+  font-size: 15px;
+  color: #f62d51;
+}

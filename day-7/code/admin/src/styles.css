@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'assets/bootstrap.min.css';
+
+
+h1 {
+  text-align: center;
+}
+
+.no-record-message {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+textarea {
+  resize: none;
+}

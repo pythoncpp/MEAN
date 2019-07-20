@@ -1,0 +1,49 @@
+> npm install mysql express multer crypto-js
+
+
+CREATE TABLE `movie` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(1000) DEFAULT NULL,
+  `description` varchar(10000) DEFAULT NULL,
+  `country` varchar(100) DEFAULT NULL,
+  `genreId` int(11) DEFAULT NULL,
+  `year` int(11) DEFAULT NULL,
+  `cast` varchar(1000) DEFAULT NULL,
+  `producer` varchar(1000) DEFAULT NULL,
+  `duration` varchar(20) DEFAULT NULL,
+  `thumbnail` varchar(200) DEFAULT NULL,
+  `videoUrl` varchar(200) DEFAULT NULL,
+  `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE `user` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `phone` varchar(15) DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
+  `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `genre` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT '',
+  `description` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `admin` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

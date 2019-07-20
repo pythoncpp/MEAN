@@ -1,0 +1,130 @@
+<h1>Add Movie</h1>
+
+<div class="form" style="margin-top: 20px;">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" class="form-control" [(ngModel)]="title">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Country</label>
+        <select [(ngModel)]="country" class="form-control">
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+          <option value="denmark">Denmark</option>
+          <option value="norway">Norway</option>
+          <option value="australia">Australia</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+              <label for="">Description</label>
+              <textarea [(ngModel)]="description" rows="9" class="form-control"></textarea>
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+              <label for="">Thumbnail</label>
+              <input accept="image/*" (change)="onSelectThumbnail($event)" type="file" class="form-control">
+              <div>
+                <img
+                  style="height: 210px"
+                  *ngIf="imageData != null"
+                  [src]="imageData" alt="">
+              </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Video URL</label>
+            <input [(ngModel)]="videoUrl" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Producer</label>
+            <input [(ngModel)]="producer" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Cast</label>
+            <input [(ngModel)]="cast" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Genre</label>
+            <select [(ngModel)]="genre" class="form-control">
+              <option
+                *ngFor="let genre of genres"
+                [value]="genre.id">{{genre.title}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Year</label>
+            <input [(ngModel)]="year" type="number" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">IMDB Rating</label>
+            <input [(ngModel)]="rating" type="number" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Duration</label>
+            <input [(ngModel)]="duration" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 20px ">
+      <button (click)="onAdd()" class="btn btn-success">Add</button>
+      <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px">Cancel</button>
+  </div>
+</div>

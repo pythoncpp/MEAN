@@ -1,0 +1,40 @@
+{
+	"express sever": {
+		"prefix": "express_app",
+		"body": [
+			"const express = require('express')",
+			"",
+			"const app = express()",
+			"",
+			"app.listen(4000, '0.0.0.0', () => {",
+			"	console.log('server started  on port 4000')",
+			"})"
+		],
+		"description": "Log output to console"
+	},
+	"express route": {
+		"prefix": "route_get",
+		"body": [
+			"router.get('/', (request, response) => {",
+			"	response.send()",
+			"})"
+		],
+		"description": "route get"
+	},
+	"express route": {
+		"prefix": "route_post",
+		"body": [
+			"router.post('/', (request, response) => {",
+			"	const {} = request.body",
+			"",
+			"	const statement = `insert into ",
+			"		()  values",
+			"		('${}')`",
+			"	const connection = db.connect()",
+			"	connection.query(statement, (error, result) => {",
+			"		response.send(utils.createResult(error, result))",
+			"	})",
+			"})",
+		]
+	}
+}

@@ -1,0 +1,15 @@
+* admin
+  * categories
+  * account types
+* client
+* user
+  * categories
+  * account types
+  * items
+  * invoice
+  * payment
+  * account types
+  * quotation
+  * vendor
+  * payment terms
+  * 

@@ -1,0 +1,151 @@
+* Docker
+
+- check the version
+  > docker —-version
+
+— get the docker information
+  > docker info
+
+- list the images 
+  > docker images
+
+- pull the image
+  > docker pull <image name/ID>
+
+- create and start a new container
+  > docker run <image name/ID>
+
+  - arguments
+    - i: interactive 
+    - t: tty (teletype)
+    - d: daemon
+    - p: publishing a port
+      - -p <localhost port>:<container port>
+    - --name: used to set the name to the container 
+    - -e: used to set environment variables
+      - -e <variable name>=<variable value>
+    - -v: used to attach a volume
+      -  -v <localhost directory>:<container directory>
+
+- start existing container
+  > docker start <container id>
+
+- list the running containers
+  > docker ps
+
+- list all the containers [started/stopped]
+  > docker ps -a
+
+- remove a container 
+  > docker rm <container name/id>
+
+- remove all containers
+  > docker rm $(docker ps -a -q)
+
+- remove an image
+  > docker rmi <image name/id>
+
+- remove all the images
+  > docker rmi $(docker images -q)
+
+- start the container in  interactive mode
+  > docker run -it <image name>
+
+- stop the container
+  > docker stop <container id>
+
+- execute a command in the running container
+  > docker exec -it <container id> <command>
+
+- create a new image
+  > docker commit <container id> <image name>:<tag>
+
+- tag the image
+  > docker image tage <image name> <registry ip address>:<port>/<image name>
+
+- push the image to registry
+  > docker push <registry ip address>:<port>/<image name>
+
+- Dockerfile
+  - with instructions to build an image
+  - commands
+    - FROM: used to specify the base image [OS]
+    - RUN: used to execute a command  while building an image
+    - EXPOSE: used to open a port
+    - CMD: used to execute a command while running a container
+    - ENV: used to set environment variable 
+    - WORKDIR: used to set the working directory
+
+
+* docker-compose
+
+- build image(s) and start container(s)
+  > docker-compose up -d
+
+- stop the containers
+  > docker-compose stop
+
+> stop and remove the containers
+  > docker-compose down
+
+> stop and remove the containers and remove the images as well
+  > docker-compose down --rmi all
+
+
+
+* docker swarm
+
+- initialise the docker swarm
+  > docker swarm init
+
+- list the nodes 
+  > docker node ls
+
+- list the running services
+  > docker service ls
+
+- create service
+  > docker service create —-name <service name> <docker image name>
+
+- check service status [containers]
+  > docker sevice ps <service name>
+
+- scale service
+  > docker service scale <service name>=<no of containers>
+
+- remove service
+  > docker service rm <service name>
+
+- remove a node from swarm
+  > docker node rm <node id>
+
+- leave from swarm
+  > docker swarm leave
+
+- stop the swarm
+  > docker swarm leave —-force
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

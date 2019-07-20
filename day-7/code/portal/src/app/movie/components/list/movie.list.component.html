@@ -1,0 +1,62 @@
+<h4 *ngIf="movies.length == 0">There are no movies for this genre</h4>
+
+<div
+  class="col-md-4 movie-container"
+  *ngFor="let movie of movies">
+
+  <div
+    class="movie-item">
+    <h4>{{movie.title}}</h4>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <img src="http://localhost:4000/{{movie.thumbnail}}" alt="">
+      </div>
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Year</div>
+            <div class="value">{{movie.year}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Producer</div>
+            <div class="value">{{movie.producer}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Cast</div>
+            <div class="value">{{movie.cast}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Duration</div>
+            <div class="value">{{movie.duration}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Rating</div>
+            <div class="value">{{movie.rating}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row"  style="margin-top: 10px; font-size: 16px;">
+      <div class="col-md-12">
+        <p>{{movie.description | shortDescription}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

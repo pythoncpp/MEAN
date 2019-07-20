@@ -1,0 +1,71 @@
+* Admin panel
+- movie
+  - add
+  - update
+  - delete
+  - get movies 
+    - all movies
+    - top movies
+    - search movies
+- order
+  - list of orders
+  - manage the orders
+- user
+  - list of users
+  - manage user
+
+* Portal
+- movies
+  - all movies
+  - top movies
+  - search movies
+- cart implementation
+- online payment
+- my orders
+- comments
+- review a movie
+
+
+
+1. User gets registered
+   - a new token will be generated for every user 
+   - the token will be used for
+     - activation
+     - password reset
+2. User receives an email with OTP
+   - the activation link will include the token for the user
+3. User uses the  link to activate the account
+   - to activate the account
+     - find the user by using token
+     - change the active status from 0 to 1
+4. User uses the  portal by log-in  in the application
+
+
+
+
+http://localhost:4300/user-activate?token=b5b0c290-aaba-11e9-bfb7-1d7eb2f6bf27
+
+.subscribe(response => {
+        const result = response.json()
+        if (result['status'] === 'success') {
+          
+        }
+      })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
