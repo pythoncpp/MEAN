@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-shared-navigation></app-shared-navigation>
+  </div>
+</div>
+
+<div class="row" style="background-color: #EDF3F7; margin-top: 50px;">
+  <div class="col-md-2">
+    <app-shared-sidebar (filterMovies)="onFilterMovies($event)"></app-shared-sidebar>
+  </div>
+
+  <div class="col-md-10" >
+    <div style="overflow: scroll; height: 100vh;">
+        <router-outlet></router-outlet>
+        <!-- <app-movie-list></app-movie-list> -->
+    </div>
+  </div>
+</div>

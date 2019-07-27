@@ -1,0 +1,11 @@
+<div class="menu-container">
+    <ul class="menu">
+        <li *ngFor="let genre of genres" [class.li-active]="genre.id == selectedGenre">
+          <a (click)="onSelectGenre(genre)" href="javascript:;" [class.a-active]="genre.id == selectedGenre">
+            <i class="glyphicon glyphicon-play-circle"></i>
+            {{genre.title}}
+          </a>
+        </li>
+    </ul>
+</div>
+

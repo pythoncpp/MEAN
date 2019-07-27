@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'assets/bootstrap4.min.css';
+
+h1 {
+  text-align: center;
+  font-size: 25px;
+}

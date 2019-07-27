@@ -1,0 +1,14 @@
+nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 44px;
+  z-index: 100;
+}
+
+.greet-user {
+  color: white;
+  display: inline-block;
+  line-height: 3.0em;
+  font-size: 1.2em;
+}

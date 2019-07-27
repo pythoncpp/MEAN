@@ -1,0 +1,72 @@
+
+
+<div class="movie-item" *ngIf="movie != null">
+
+    <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-success" (click)="onList()">List</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-success pull-right" (click)="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <h2>{{movie.title}}</h2>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Year</div>
+            <div class="value">{{movie.year}}</div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+              <div class="heading">Price</div>
+              <div class="value">${{movie.price}}</div>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Producer</div>
+            <div class="value">{{movie.producer}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Cast</div>
+            <div class="value">{{movie.cast}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Duration</div>
+            <div class="value">{{movie.duration}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">Rating</div>
+            <div class="value">{{movie.rating}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+          <img src="http://localhost:4000/{{movie.thumbnail}}" alt="">
+        </div>
+
+    </div>
+
+    <div class="row"  style="margin-top: 10px; font-size: 16px;">
+      <div class="col-md-12">
+        <p>{{movie.description}}</p>
+      </div>
+    </div>
+</div>
