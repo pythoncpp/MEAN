@@ -1,0 +1,86 @@
+* url
+
+Windows: http://192.168.11.6/mongo/mongodb.msi
+-- click next ....
+
+Linux: http://192.168.11.6/mongo/mongodb.deb
+> sudo dpkg -i mongo.deb
+> sudo mkdir /data
+> sudo chmod 777 /data 
+> sudo service mongod start
+
+
+Mac: http://192.168.11.6/mongo/mongodb.tgz
+> tar -xjvf mongodb.tgz
+> vim ~/.bashrc
+> export PATH=$PATH:<path to mongo directory>/bin
+> source ~/.bashrc
+> sudo mkdir -p /data
+> sudo chmod 777 /data 
+> mongod
+
+
+* commands
+
+> show dbs
+-- show databases
+
+> use mydb
+-- use mydb
+
+> db
+
+> db.createCollection('Person')
+-- create table Person (...)
+
+> show collections
+-- show tables
+
+
+> db.Person.insert({ name: "person1", email: "p1@test.com", age: 40 })
+-- insert into Person(..) values (..) 
+
+> db.Product.insertMany([ { title: 'product 1', price: 100 }, { title: 'product 2', price: 2000, description: 'this is second document'} ])
+-- insert into Person(..) values (..)
+
+
+> db.Person.find()
+-- select * from Person
+
+> db.Person.find().pretty()
+
+> db.Product.find({ _id: ObjectId("5d4e66bfa886ebeb020d994e") })
+-- select * from Product where id = 1
+
+
+> db.Product.find( {}, { title: 1, _id: 0 } )
+-- select title from Product 
+
+> db.Product.find( { _id: ObjectId('5d4e66bfa886ebeb020d994d') }, { title: 1, _id: 0 })
+-- select title from Product where id = 1
+
+> db.Product.update( {_id: ObjectId('5d4e66bfa886ebeb020d994d')}, { $set: { price: 1000 } })
+-- update Product set price = 1000 where id = 1
+
+> db.Mobile.update( { _id: ObjectId("5d4e6b4c1383724dfe901031") },  { $set: { model: 'iPhone', company: 'Apple Inc' } } )
+-- update Mobile set model = 'iPhone', company: 'Apple Inc' where id = 1
+
+> db.Product.drop()
+-- drop table Product
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

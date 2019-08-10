@@ -1,0 +1,27 @@
+<h3>Product List</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Rating</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{product._id}}</td>
+      <td>{{product.title}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.rating}}</td>
+      <td>
+        <a href="javascript:;" (click)="onEdit(product)">edit</a>
+        <a style="margin-left: 10px" href="javascript:;" (click)="onDelete(product)">delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

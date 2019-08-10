@@ -1,0 +1,61 @@
+<h3>Add Product</h3>
+
+<div class="row">
+  <div class="col-md-12">
+    <label for="">Title</label>
+    <input [(ngModel)]="title" type="text" class="form-control">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <label for="">Price</label>
+    <input [(ngModel)]="price" type="text" class="form-control">
+  </div>
+  <div class="col-md-6">
+    <label for="">Rating</label>
+    <input [(ngModel)]="rating" type="text" class="form-control">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <label for="">Category</label>
+    <select [(ngModel)]="category" class="form-control">
+      <option value="select">Select Category</option>
+      <option value="mobile">Mobile</option>
+      <option value="motor">Motor</option>
+    </select>
+  </div>
+  <div class="col-md-6" *ngIf="category == 'motor'">
+    <label for="">Size</label>
+    <input [(ngModel)]="size" type="text" class="form-control">
+  </div>
+</div>
+
+<div class="row" *ngIf="category == 'mobile'">
+  <div class="col-md-6">
+    <label for="">CPU</label>
+    <input [(ngModel)]="cpu" type="text" class="form-control">
+  </div>
+  <div class="col-md-6">
+    <label for="">RAM</label>
+    <input [(ngModel)]="ram" type="text" class="form-control">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <label for="">description</label>
+    <textarea [(ngModel)]="description" class="form-control"></textarea>
+  </div>
+</div>
+
+
+
+<div class="row" style="margin-top: 10px">
+  <div class="col-md-12">
+    <button (click)="onSave()" class="btn btn-success">Save</button>
+    <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px">Cancel</button>
+  </div>
+</div>
