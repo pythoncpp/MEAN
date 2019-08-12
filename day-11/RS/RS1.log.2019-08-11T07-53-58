@@ -1,0 +1,181 @@
+2019-08-11T13:06:48.840+0530 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten] MongoDB starting : pid=22134 port=27017 dbpath=./RS1 64-bit host=MacBook-Pro.local
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten] db version v4.0.10
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten] git version: c389e7f69f637f7a1ac3cc9fae843b635f20b766
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten] allocator: system
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten] modules: none
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten] build environment:
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-08-11T13:06:48.851+0530 I CONTROL  [initandlisten] options: { net: { port: 27017 }, replication: { replSet: "MyRS" }, storage: { dbPath: "./RS1" }, systemLog: { destination: "file", path: "RS1.log" } }
+2019-08-11T13:06:48.852+0530 I STORAGE  [initandlisten] Detected data files in ./RS1 created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-08-11T13:06:48.852+0530 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7680M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-08-11T13:06:49.493+0530 I STORAGE  [initandlisten] WiredTiger message [1565509009:493115][22134:0x1119695c0], txn-recover: Main recovery loop: starting at 1/21248 to 2/256
+2019-08-11T13:06:49.578+0530 I STORAGE  [initandlisten] WiredTiger message [1565509009:578600][22134:0x1119695c0], txn-recover: Recovering log 1 through 2
+2019-08-11T13:06:49.638+0530 I STORAGE  [initandlisten] WiredTiger message [1565509009:637998][22134:0x1119695c0], txn-recover: Recovering log 2 through 2
+2019-08-11T13:06:49.684+0530 I STORAGE  [initandlisten] WiredTiger message [1565509009:684299][22134:0x1119695c0], txn-recover: Set global recovery timestamp: 0
+2019-08-11T13:06:49.761+0530 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] 
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] 
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] 
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] 
+2019-08-11T13:06:49.797+0530 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2019-08-11T13:06:49.842+0530 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory './RS1/diagnostic.data'
+2019-08-11T13:06:49.846+0530 I STORAGE  [initandlisten] createCollection: local.replset.oplogTruncateAfterPoint with generated UUID: a0c85f62-ce70-4961-8e41-fd23d5888f19
+2019-08-11T13:06:49.878+0530 I STORAGE  [initandlisten] createCollection: local.replset.minvalid with generated UUID: a56e7ac3-64ec-47e1-ad25-16ba7758a88f
+2019-08-11T13:06:49.908+0530 I REPL     [initandlisten] Did not find local voted for document at startup.
+2019-08-11T13:06:49.912+0530 I REPL     [initandlisten] Did not find local Rollback ID document at startup. Creating one.
+2019-08-11T13:06:49.912+0530 I STORAGE  [initandlisten] createCollection: local.system.rollback.id with generated UUID: e74e2e00-88ef-4acf-8511-b4af9040931c
+2019-08-11T13:06:49.938+0530 I REPL     [initandlisten] Initialized the rollback ID to 1
+2019-08-11T13:06:49.941+0530 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument: Did not find replica set configuration document in local.system.replset
+2019-08-11T13:06:49.941+0530 I CONTROL  [LogicalSessionCacheRefresh] Sessions collection is not set up; waiting until next sessions refresh interval: Replication has not yet been configured
+2019-08-11T13:06:49.941+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-08-11T13:06:57.604+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:58944 #1 (1 connection now open)
+2019-08-11T13:06:57.604+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:58945 #2 (2 connections now open)
+2019-08-11T13:06:57.604+0530 I NETWORK  [conn1] received client metadata from 127.0.0.1:58944 conn1: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:06:57.604+0530 I NETWORK  [conn2] received client metadata from 127.0.0.1:58945 conn2: { application: { name: "Navicat" }, driver: { name: "mongoc", version: "1.11.0" }, os: { type: "Darwin", name: "macOS", version: "18.7.0", architecture: "x86_64" }, platform: "cfg=0x00d680e9 posix=200112 stdc=201112 CC=clang 7.0.0 (clang-700.1.76) CFLAGS="-s" LDFLAGS=""" }
+2019-08-11T13:07:03.013+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:58958 #3 (3 connections now open)
+2019-08-11T13:07:03.013+0530 I NETWORK  [conn3] received client metadata from 127.0.0.1:58958 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:07:21.780+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:58998 #4 (4 connections now open)
+2019-08-11T13:07:21.780+0530 I NETWORK  [conn4] received client metadata from 127.0.0.1:58998 conn4: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:07:58.062+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59074 #5 (5 connections now open)
+2019-08-11T13:07:58.062+0530 I NETWORK  [conn5] received client metadata from 127.0.0.1:59074 conn5: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:08:14.996+0530 I NETWORK  [conn3] end connection 127.0.0.1:58958 (4 connections now open)
+2019-08-11T13:11:49.941+0530 I CONTROL  [LogicalSessionCacheRefresh] Sessions collection is not set up; waiting until next sessions refresh interval: Replication has not yet been configured
+2019-08-11T13:13:28.169+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59782 #6 (5 connections now open)
+2019-08-11T13:13:28.169+0530 I NETWORK  [conn6] received client metadata from 127.0.0.1:59782 conn6: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:10.267+0530 I REPL     [conn6] replSetInitiate admin command received from client
+2019-08-11T13:14:10.271+0530 I REPL     [conn6] replSetInitiate config object with 3 members parses ok
+2019-08-11T13:14:10.271+0530 I ASIO     [Replication] Connecting to localhost:27018
+2019-08-11T13:14:10.271+0530 I ASIO     [Replication] Connecting to localhost:27019
+2019-08-11T13:14:10.273+0530 I REPL     [conn6] ******
+2019-08-11T13:14:10.273+0530 I REPL     [conn6] creating replication oplog of size: 192MB...
+2019-08-11T13:14:10.273+0530 I STORAGE  [conn6] createCollection: local.oplog.rs with generated UUID: 060a9f70-3956-4d3e-a855-ed9f0149999b
+2019-08-11T13:14:10.274+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59873 #11 (6 connections now open)
+2019-08-11T13:14:10.274+0530 I NETWORK  [conn11] received client metadata from 127.0.0.1:59873 conn11: { driver: { name: "NetworkInterfaceTL", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:10.275+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59874 #12 (7 connections now open)
+2019-08-11T13:14:10.275+0530 I NETWORK  [conn12] received client metadata from 127.0.0.1:59874 conn12: { driver: { name: "NetworkInterfaceTL", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:10.292+0530 I STORAGE  [conn6] Starting OplogTruncaterThread local.oplog.rs
+2019-08-11T13:14:10.296+0530 I STORAGE  [conn6] The size storer reports that the oplog contains 0 records totaling to 0 bytes
+2019-08-11T13:14:10.296+0530 I STORAGE  [conn6] Scanning the oplog to determine where to place markers for truncation
+2019-08-11T13:14:10.347+0530 I REPL     [conn6] ******
+2019-08-11T13:14:10.350+0530 I STORAGE  [conn6] createCollection: local.system.replset with generated UUID: 528be716-4002-477f-9c86-74101030faf3
+2019-08-11T13:14:10.386+0530 I REPL     [conn6] New replica set config in use: { _id: "MyRS", version: 1, protocolVersion: 1, writeConcernMajorityJournalDefault: true, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: -1, catchUpTakeoverDelayMillis: 30000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('5d4fc74a6ba946bfa9ff11f8') } }
+2019-08-11T13:14:10.389+0530 I REPL     [conn6] This node is localhost:27017 in the config
+2019-08-11T13:14:10.389+0530 I REPL     [conn6] transition to STARTUP2 from STARTUP
+2019-08-11T13:14:10.389+0530 I REPL     [conn6] Starting replication storage threads
+2019-08-11T13:14:10.390+0530 I REPL     [replexec-1] Member localhost:27019 is now in state STARTUP
+2019-08-11T13:14:10.390+0530 I REPL     [conn6] transition to RECOVERING from STARTUP2
+2019-08-11T13:14:10.390+0530 I REPL     [conn6] Starting replication fetcher thread
+2019-08-11T13:14:10.390+0530 I REPL     [conn6] Starting replication applier thread
+2019-08-11T13:14:10.390+0530 I REPL     [replexec-0] Member localhost:27018 is now in state STARTUP
+2019-08-11T13:14:10.390+0530 I REPL     [conn6] Starting replication reporter thread
+2019-08-11T13:14:10.390+0530 I REPL     [rsSync-0] Starting oplog application
+2019-08-11T13:14:10.391+0530 I COMMAND  [conn6] command local.system.replset appName: "MongoDB Shell" command: replSetInitiate { replSetInitiate: { _id: "MyRS", members: [ { _id: 0.0, host: "localhost:27017" }, { _id: 1.0, host: "localhost:27018" }, { _id: 2.0, host: "localhost:27019" } ] }, lsid: { id: UUID("85e95199-ebc1-4629-8dde-29c472687428") }, $clusterTime: { clusterTime: Timestamp(0, 0), signature: { hash: BinData(0, 0000000000000000000000000000000000000000), keyId: 0 } }, $db: "admin" } numYields:0 reslen:163 locks:{ Global: { acquireCount: { r: 12, w: 4, W: 2 }, acquireWaitCount: { W: 1 }, timeAcquiringMicros: { W: 57 } }, Database: { acquireCount: { r: 2, w: 3, W: 1 } }, Collection: { acquireCount: { r: 1, w: 1 } }, oplog: { acquireCount: { r: 1, w: 2 } } } storage:{} protocol:op_msg 123ms
+2019-08-11T13:14:10.391+0530 I REPL     [rsSync-0] transition to SECONDARY from RECOVERING
+2019-08-11T13:14:10.391+0530 I REPL     [rsSync-0] Resetting sync source to empty, which was :27017
+2019-08-11T13:14:12.281+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59879 #13 (8 connections now open)
+2019-08-11T13:14:12.281+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59880 #14 (9 connections now open)
+2019-08-11T13:14:12.281+0530 I NETWORK  [conn13] end connection 127.0.0.1:59879 (8 connections now open)
+2019-08-11T13:14:12.281+0530 I NETWORK  [conn14] end connection 127.0.0.1:59880 (7 connections now open)
+2019-08-11T13:14:12.401+0530 I REPL     [replexec-1] Member localhost:27019 is now in state STARTUP2
+2019-08-11T13:14:12.404+0530 I REPL     [replexec-0] Member localhost:27018 is now in state STARTUP2
+2019-08-11T13:14:12.659+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59885 #15 (8 connections now open)
+2019-08-11T13:14:12.665+0530 I NETWORK  [conn15] received client metadata from 127.0.0.1:59885 conn15: { driver: { name: "NetworkInterfaceTL", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:12.676+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59886 #16 (9 connections now open)
+2019-08-11T13:14:12.677+0530 I NETWORK  [conn16] received client metadata from 127.0.0.1:59886 conn16: { driver: { name: "NetworkInterfaceTL", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:12.678+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59887 #17 (10 connections now open)
+2019-08-11T13:14:12.678+0530 I NETWORK  [conn17] received client metadata from 127.0.0.1:59887 conn17: { driver: { name: "NetworkInterfaceTL", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:12.680+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59888 #18 (11 connections now open)
+2019-08-11T13:14:12.680+0530 I NETWORK  [conn18] received client metadata from 127.0.0.1:59888 conn18: { driver: { name: "NetworkInterfaceTL", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:12.901+0530 I REPL     [replexec-0] Member localhost:27019 is now in state SECONDARY
+2019-08-11T13:14:12.905+0530 I REPL     [replexec-0] Member localhost:27018 is now in state SECONDARY
+2019-08-11T13:14:21.383+0530 I REPL     [replexec-0] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2019-08-11T13:14:21.383+0530 I REPL     [replexec-0] conducting a dry run election to see if we could be elected. current term: 0
+2019-08-11T13:14:21.384+0530 I REPL     [replexec-1] VoteRequester(term 0 dry run) received a yes vote from localhost:27019; response message: { term: 0, voteGranted: true, reason: "", ok: 1.0, operationTime: Timestamp(1565509450, 1), $clusterTime: { clusterTime: Timestamp(1565509450, 1), signature: { hash: BinData(0, 0000000000000000000000000000000000000000), keyId: 0 } } }
+2019-08-11T13:14:21.384+0530 I REPL     [replexec-1] dry election run succeeded, running for election in term 1
+2019-08-11T13:14:21.384+0530 I STORAGE  [replexec-1] createCollection: local.replset.election with generated UUID: ced221bf-aaa2-4d0e-a53a-d0af8fe2db7a
+2019-08-11T13:14:21.443+0530 I ASIO     [Replication] Connecting to localhost:27018
+2019-08-11T13:14:21.444+0530 I ASIO     [Replication] Connecting to localhost:27019
+2019-08-11T13:14:21.480+0530 I REPL     [replexec-2] VoteRequester(term 1) received a yes vote from localhost:27019; response message: { term: 1, voteGranted: true, reason: "", ok: 1.0, operationTime: Timestamp(1565509450, 1), $clusterTime: { clusterTime: Timestamp(1565509450, 1), signature: { hash: BinData(0, 0000000000000000000000000000000000000000), keyId: 0 } } }
+2019-08-11T13:14:21.484+0530 I REPL     [replexec-2] election succeeded, assuming primary role in term 1
+2019-08-11T13:14:21.484+0530 I REPL     [replexec-2] transition to PRIMARY from SECONDARY
+2019-08-11T13:14:21.490+0530 I REPL     [replexec-2] Resetting sync source to empty, which was :27017
+2019-08-11T13:14:21.496+0530 I REPL     [replexec-2] Entering primary catch-up mode.
+2019-08-11T13:14:21.508+0530 I REPL     [replexec-4] Caught up to the latest optime known via heartbeats after becoming primary. Target optime: { ts: Timestamp(1565509450, 1), t: -1 }. My Last Applied: { ts: Timestamp(1565509450, 1), t: -1 }
+2019-08-11T13:14:21.508+0530 I REPL     [replexec-4] Exited primary catch-up mode.
+2019-08-11T13:14:21.508+0530 I REPL     [replexec-4] Stopping replication producer
+2019-08-11T13:14:22.433+0530 I STORAGE  [rsSync-0] createCollection: config.transactions with generated UUID: aa5ca518-b537-4734-879e-cb5428a42a8f
+2019-08-11T13:14:22.466+0530 I REPL     [rsSync-0] transition to primary complete; database writes are now permitted
+2019-08-11T13:14:22.472+0530 I STORAGE  [monitoring keys for HMAC] createCollection: admin.system.keys with generated UUID: 92468f4e-6d66-4e27-a489-7d41300868f4
+2019-08-11T13:14:22.683+0530 I NETWORK  [conn16] end connection 127.0.0.1:59886 (10 connections now open)
+2019-08-11T13:14:22.692+0530 I NETWORK  [conn15] end connection 127.0.0.1:59885 (9 connections now open)
+2019-08-11T13:14:23.889+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59915 #21 (10 connections now open)
+2019-08-11T13:14:23.890+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59916 #22 (11 connections now open)
+2019-08-11T13:14:23.890+0530 I NETWORK  [conn21] received client metadata from 127.0.0.1:59915 conn21: { driver: { name: "NetworkInterfaceTL", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:23.890+0530 I NETWORK  [conn22] received client metadata from 127.0.0.1:59916 conn22: { driver: { name: "NetworkInterfaceTL", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:23.899+0530 I STORAGE  [conn17] Triggering the first stable checkpoint. Initial Data: Timestamp(1565509450, 1) PrevStable: Timestamp(0, 0) CurrStable: Timestamp(1565509462, 1)
+2019-08-11T13:14:24.026+0530 I COMMAND  [monitoring keys for HMAC] command admin.system.keys command: insert { insert: "system.keys", bypassDocumentValidation: false, ordered: true, documents: [ { _id: 6723811940868554753, purpose: "HMAC", key: BinData(0, 26268128637F4499A51DC62F73FD9CD1C0337298), expiresAt: Timestamp(1573285462, 0) } ], writeConcern: { w: "majority", wtimeout: 60000 }, allowImplicitCollectionCreation: true, $db: "admin" } ninserted:1 keysInserted:1 numYields:0 reslen:230 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { W: 3 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 1553ms
+2019-08-11T13:14:31.440+0530 I CONNPOOL [Replication] Ending connection to host localhost:27018 due to bad connection status; 1 connections to that host remain open
+2019-08-11T13:14:46.168+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59964 #23 (12 connections now open)
+2019-08-11T13:14:46.168+0530 I NETWORK  [conn23] received client metadata from 127.0.0.1:59964 conn23: { driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:14:46.170+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59967 #24 (13 connections now open)
+2019-08-11T13:14:46.170+0530 I NETWORK  [conn24] received client metadata from 127.0.0.1:59967 conn24: { driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:15:07.881+0530 I NETWORK  [conn6] end connection 127.0.0.1:59782 (12 connections now open)
+2019-08-11T13:15:10.207+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:60016 #25 (13 connections now open)
+2019-08-11T13:15:10.207+0530 I NETWORK  [conn25] received client metadata from 127.0.0.1:60016 conn25: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:15:21.462+0530 I CONNPOOL [Replication] Ending idle connection to host localhost:27019 because the pool meets constraints; 1 connections to that host remain open
+2019-08-11T13:15:46.905+0530 I STORAGE  [conn25] createCollection: mydb.Person with generated UUID: 5a8a57bf-9849-4310-aea2-55d86a0af997
+2019-08-11T13:16:02.775+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:60125 #26 (14 connections now open)
+2019-08-11T13:16:02.775+0530 I NETWORK  [conn26] received client metadata from 127.0.0.1:60125 conn26: { driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:16:02.776+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:60126 #27 (15 connections now open)
+2019-08-11T13:16:02.776+0530 I NETWORK  [conn27] received client metadata from 127.0.0.1:60126 conn27: { driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-08-11T13:16:51.450+0530 I NETWORK  [conn25] end connection 127.0.0.1:60016 (14 connections now open)
+2019-08-11T13:17:54.156+0530 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2019-08-11T13:17:54.156+0530 I REPL     [signalProcessingThread] transition to SECONDARY from PRIMARY
+2019-08-11T13:17:54.156+0530 I NETWORK  [signalProcessingThread] Skip closing connection for connection # 22
+2019-08-11T13:17:54.156+0530 I NETWORK  [signalProcessingThread] Skip closing connection for connection # 21
+2019-08-11T13:17:54.156+0530 I NETWORK  [signalProcessingThread] Skip closing connection for connection # 18
+2019-08-11T13:17:54.156+0530 I NETWORK  [signalProcessingThread] Skip closing connection for connection # 17
+2019-08-11T13:17:54.156+0530 I NETWORK  [signalProcessingThread] Skip closing connection for connection # 12
+2019-08-11T13:17:54.156+0530 I NETWORK  [signalProcessingThread] Skip closing connection for connection # 11
+2019-08-11T13:17:54.156+0530 I NETWORK  [conn5] end connection 127.0.0.1:59074 (13 connections now open)
+2019-08-11T13:17:54.156+0530 I NETWORK  [conn27] end connection 127.0.0.1:60126 (12 connections now open)
+2019-08-11T13:17:54.156+0530 I REPL     [signalProcessingThread] Handing off election to localhost:27018
+2019-08-11T13:17:54.156+0530 I NETWORK  [conn26] end connection 127.0.0.1:60125 (10 connections now open)
+2019-08-11T13:17:54.156+0530 I NETWORK  [conn23] end connection 127.0.0.1:59964 (9 connections now open)
+2019-08-11T13:17:54.156+0530 I NETWORK  [conn4] end connection 127.0.0.1:58998 (7 connections now open)
+2019-08-11T13:17:54.156+0530 I NETWORK  [conn24] end connection 127.0.0.1:59967 (11 connections now open)
+2019-08-11T13:17:54.156+0530 I NETWORK  [conn1] end connection 127.0.0.1:58944 (6 connections now open)
+2019-08-11T13:17:54.156+0530 I NETWORK  [conn2] end connection 127.0.0.1:58945 (8 connections now open)
+2019-08-11T13:17:54.157+0530 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2019-08-11T13:17:54.157+0530 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2019-08-11T13:17:54.157+0530 I REPL     [signalProcessingThread] shutting down replication subsystems
+2019-08-11T13:17:54.157+0530 I REPL     [signalProcessingThread] Stopping replication reporter thread
+2019-08-11T13:17:54.157+0530 I REPL     [signalProcessingThread] Stopping replication fetcher thread
+2019-08-11T13:17:54.157+0530 I REPL     [signalProcessingThread] Stopping replication applier thread
+2019-08-11T13:17:54.158+0530 I REPL     [rsSync-0] Finished oplog application
+2019-08-11T13:17:54.902+0530 I REPL     [rsBackgroundSync] Stopping replication producer
+2019-08-11T13:17:54.903+0530 I REPL     [signalProcessingThread] Stopping replication storage threads
+2019-08-11T13:17:54.903+0530 I ASIO     [RS] Killing all outstanding egress activity.
+2019-08-11T13:17:54.903+0530 I ASIO     [RS] Killing all outstanding egress activity.
+2019-08-11T13:17:54.904+0530 I ASIO     [Replication] Killing all outstanding egress activity.
+2019-08-11T13:17:54.904+0530 I CONNPOOL [Replication] Dropping all pooled connections to localhost:27018 due to ShutdownInProgress: Shutting down the connection pool
+2019-08-11T13:17:54.904+0530 I CONNPOOL [Replication] Dropping all pooled connections to localhost:27019 due to ShutdownInProgress: Shutting down the connection pool
+2019-08-11T13:17:54.904+0530 I CONTROL  [signalProcessingThread] Shutting down free monitoring
+2019-08-11T13:17:54.904+0530 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2019-08-11T13:17:54.909+0530 I STORAGE  [WTOplogJournalThread] oplog journal thread loop shutting down
+2019-08-11T13:17:54.909+0530 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2019-08-11T13:17:54.918+0530 I STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2019-08-11T13:17:54.921+0530 I STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2019-08-11T13:17:55.030+0530 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2019-08-11T13:17:55.033+0530 I CONTROL  [signalProcessingThread] now exiting
+2019-08-11T13:17:55.033+0530 I CONTROL  [signalProcessingThread] shutting down with code:0

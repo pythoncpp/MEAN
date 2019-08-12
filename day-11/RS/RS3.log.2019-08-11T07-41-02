@@ -1,0 +1,13 @@
+2019-08-11T13:10:32.408+0530 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten] MongoDB starting : pid=22865 port=27017 dbpath=./RS3 64-bit host=MacBook-Pro.local
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten] db version v4.0.10
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten] git version: c389e7f69f637f7a1ac3cc9fae843b635f20b766
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten] allocator: system
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten] modules: none
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten] build environment:
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-08-11T13:10:32.419+0530 I CONTROL  [initandlisten] options: { net: { port: 27017 }, replication: { replSet: "MyRS" }, storage: { dbPath: "./RS3" }, systemLog: { destination: "file", path: "RS3.log" } }
+2019-08-11T13:10:32.420+0530 E STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2019-08-11T13:10:32.420+0530 I CONTROL  [initandlisten] now exiting
+2019-08-11T13:10:32.420+0530 I CONTROL  [initandlisten] shutting down with code:48

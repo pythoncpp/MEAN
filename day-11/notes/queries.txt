@@ -1,0 +1,128 @@
+
+db.persons.find({ $or: [
+	{ gender: 'male' },
+	{ nat: { $in: ['US', 'CA'] } }
+]}
+
+db.persons.find().count()
+db.persons.find().skip(10)
+db.persons.find().limit(10)
+db.person.find().forEach(function(doc) {
+	print('email: ' + doc['emai'])
+})
+
+db.persons.find({ nat: { $nin: ['US', 'CA'] } })
+
+
+// aggregation 
+
+db.persons.find({})
+
+db.persons.find({}, { email: 1, name: 1 })
+
+db.persons.find({ gender: 'male' }).limit(10)
+
+// project: selection
+db.persons.aggregate([
+
+  // project
+	{
+		$project: {
+			gender: '$gender',
+			emailAddress: '$email',
+			name: { $concat: [ '$name.title', ' ', '$name.first' , ' ', '$name.last' ] },
+			address: { $concat: [ '$location.street', ', ', '$location.city', ', ', '$location.state' ]}
+		}
+	}
+])
+
+
+db.persons.aggregate([
+
+  // filter
+	{
+		$match: {
+			gender: 'male'
+		}
+	},
+	
+	// project
+	{
+		$project: {
+			gender: '$gender',
+			emailAddress: '$email',
+			name: { $concat: [ '$name.title', ' ', '$name.first' , ' ', '$name.last' ] },
+			address: { $concat: [ '$location.street', ', ', '$location.city', ', ', '$location.state' ]}
+		}
+	}
+])
+
+
+db.persons.aggregate([
+	// group
+	{
+		$group: {
+			_id: '$location.state',
+			total: { $sum: 1 }
+		}
+	}
+])
+
+
+db.persons.aggregate([
+	// sort
+	{
+		$sort: { email: -1 }
+	}
+])
+
+
+db.persons.aggregate([
+	// group
+	{
+		$group: {
+			_id: '$location.state',
+			total: { $sum: 1 }
+		}
+	},
+	
+	// sort
+	{
+		$sort: { total: -1 }
+	},
+	
+	// limit
+	{
+		$limit: 10
+	},
+	
+	// out: create a new collection based on the result of the entire pipeline
+	{
+		$out: 'top_10_states'
+	}
+])
+
+
+
+db.categories.aggregate([
+	// lookup
+	{
+		$lookup: {
+			from: 'products',
+			localField: 'products.product',
+			foreignField: '_id',
+			as: 'products'
+		}
+	},
+	
+])
+
+// indexes
+
+db.persons.find({ gender: 'male' })
+db.persons.getIndexes()
+db.persons.ensureIndex({ gender: 1 })
+db.persons.dropIndex({ gender: 1 })
+
+
+
